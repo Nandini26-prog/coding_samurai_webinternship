@@ -1,0 +1,47 @@
+.nav{
+    background-color: gray;
+    color: whitesmoke;
+    /* padding: 1; */
+    margin: 8px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: system-ui;
+}
+.equalsb{
+    /*to increase height of clear and equals button*/
+    height:60px;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:10%;
+    background-color:black;
+
+}
+/*.row{
+
+}*/
+.btn input[type='button']{
+    width:90px;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s;
+    background-color:black;
+    /*border-radius: 6px;*/
+    color: white;
+ }
+ .btn input[type='button']:hover{
+    background-color: black;
+    color: white;
+ }
+ body{
+    background-color:gray;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+ }
