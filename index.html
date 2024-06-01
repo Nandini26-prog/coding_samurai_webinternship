@@ -9,50 +9,39 @@
         type="text/css" />
     </head>
     <body>
-        <div class="nav" >
+       <!---- <div class="nav" > 
             <h1>Web Calculator</h1>
-            
         </div>
-        <div class="container">
-             <div class ="row">
+        -->
 
+        <div class="container">
+            <h1 class="nav"> Calculate </h1>
+            <input id="display" readonly>
                 <div class="btn"> 
-                <input type ="button" value='sin' onclick="solve('sin')">
-                <input type ="button" value='ln'  onclick="solve('ln')">
-                <input type ="button" value='7'   onclick="solve('7')">
-                <input type ="button" value='8'  onclick="solve('8')">
-                <input type ="button" value='9'  onclick="solve('9')">
-                <input type ="button" value='÷'  onclick="solve('/')">
-                <input type ="button" class=equalsb value='C'  onclick="Clear()">
-            </div>
-            
-            <div class="btn"> 
-                <input type ="button" value='cos'  onclick="solve('cos')">
-                <input type ="button" value='log'  onclick="solve('log')">
-                <input type ="button" value='4'  onclick="solve('4')">
-                <input type ="button" value='5'  onclick="solve('5')">
-                <input type ="button" value='6'  onclick="solve('6')">
-                <input type ="button" value='×'  onclick="solve('*')">
-            </div>
-            <div class="btn"> 
-                <input type ="button" value='tan'  onclick="solve('tan')">
-                <input type ="button" value='e'  onclick="solve('e')">
-                <input type ="button" value='1'  onclick="solve('1')">
-                <input type ="button" value='2'  onclick="solve('2')">
-                <input type ="button" value='3'  onclick="solve('3')">
-                <input type ="button" value='-'  onclick="solve('-')">
-                <input type ="button" class=equalsb value='='  onclick="result()">
-            </div>
-            <div class="btn"> 
-                <input type ="button" value='√'  onclick="solve('√')">
-                <input type ="button" value='^'  onclick="solve('^')">
-                <input type ="button" value='0'  onclick="solve('0')">
-                <input type ="button" value='.'  onclick="solve('.')">
-                <input type ="button" value='DEL'  onclick="back()">
-                <input type ="button" value='+'  onclick="solve('+')">
+                <button onclick="Clearval()" class="orangebtn">C</button>
+                <button onclick="solve('^')">^</button>
+                <button onclick="solve('7')">7</button>
+                <button onclick="solve('8')">8</button>
+                <button onclick="solve('9')">9</button>
+                <button onclick="solve('+')">+</button>
+                <button onclick="solve('-')">-</button>
+                <button onclick="solve('4')">4</button>
+                <button onclick="solve('5')">5</button>
+                <button onclick="solve('6')">6</button>
+                <button onclick="solve('*')">*</button>
+                <button onclick="solve('/')">/</button>
+                <button onclick="solve('1')">1</button>
+                <button onclick="solve('2')">2</button>
+                <button onclick="solve('3')">3</button>
+                <button onclick="solve('sin')">sin</button>
+                <button onclick="solve('cos')">cos</button>
+                <button onclick="solve('.')">.</button>
+                <button onclick="solve('0')">0</button>
+                <button onclick="result()" class="orangebtn">=</button>
+                <button onclick="solve('log')">log</button>
+                <button onclick="solve('ln')">ln</button>
             </div>
         </div> 
-        </div>
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,3 +1,12 @@
+body{
+    margin:3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    height: 100vh;
+   
+ }
 .nav{
     background-color: gray;
     color: whitesmoke;
@@ -8,40 +17,58 @@
     text-align: center;
     font-family: system-ui;
 }
+#display{
+    width: 100%;
+    padding:20px;
+    font-size: 5rem;
+    text-align: right;
+    border:none;
+    background-color:hsl(0, 0%, 40%);
+    color:orange;
+}
+.btn{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:10px;
+    padding:25px;
+
+}
+.orangebtn{
+    background-color:rgb(255, 128, 0);
+}
 .equalsb{
     /*to increase height of clear and equals button*/
     height:60px;
 }
 .container{
-    display:flex;
-    justify-content: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top:10%;
-    background-color:black;
+    max-width: 500px;
+    background-color:hsl(0, 0%, 15%);
+    border-radius: 5px;
+    overflow: hidden;
 
 }
-/*.row{
-
-}*/
-.btn input[type='button']{
-    width:90px;
-    align-items: center;
+button{
+    width:70px;
     height: 60px;
     cursor: pointer;
-    font-size: 18px;
-    transition: 0.5s;
-    background-color:black;
-    /*border-radius: 6px;*/
+    font-size: 2rem;
+    font-weight: bold;
+    background-color:hsl(0, 0%, 15%);
     color: white;
+    border:none;
  }
- .btn input[type='button']:hover{
-    background-color: black;
-    color: white;
- }
- body{
-    background-color:gray;
-    display: grid;
-    height: 100vh;
-    place-items: center;
- }
+button:hover{
+    background-color:hsl(0, 0%, 25%);
+    border-radius: 10%;
+}
+/*to flass the colour on clicking*/
+button:active{
+    background-color:hsl(0, 0%, 40%);
+}
+.orangebtn:hover{
+    background-color:rgb(246, 164, 21);
+}
+.orangebtn:active{
+    background-color:rgb(236, 200, 163);
+}
+
