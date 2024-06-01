@@ -24,9 +24,9 @@ function result() {
 
         // Replace sin, cos, log, ln with Math functions
         let result = currentInput
-            .replace(/sin\(/g, 'Math.sin(');
-            .replace(/cos\(/g, 'Math.cos(');
-            .replace(/log\(/g, 'Math.log10(') ;// log base 10
+            .replace(/sin\(/g, 'Math.sin(')
+            .replace(/cos\(/g, 'Math.cos(')
+            .replace(/log\(/g, 'Math.log10(') // log base 10
             .replace(/ln\(/g, 'Math.log('); // natural log
 
         // Evaluate the expression
