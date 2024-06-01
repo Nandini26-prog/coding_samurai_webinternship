@@ -8,7 +8,7 @@ body{
    
  }
 .nav{
-    background-color: gray;
+    background-color:hsl(0, 0%, 20%);
     color: whitesmoke;
     /* padding: 1; */
     margin: 8px;
@@ -23,7 +23,7 @@ body{
     font-size: 5rem;
     text-align: right;
     border:none;
-    background-color:hsl(0, 0%, 40%);
+    background-color:hsl(0, 0%, 20%);
     color:orange;
 }
 .btn{
