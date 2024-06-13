@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devic-width, initial-scale=1.0">
+        <title> Virtual Notepad </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1> Your Virtual Notepad</h1>
+            <h3> Todo List App</h3>
+        </header>
+        <main>
+            <section id="Add task">
+                <h2> Add Task</h2>
+                <form>
+                    <input type="text" id="task-name" placeholder="Enter the Task Name">
+                    <input type="text" id="task-description" placeholder="Enter the task description">
+                    <input type="date" id="task-date" placeholder="enter the due date">
+                    <select id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="med">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="add-TaskBtn">Add Task</button>
+                </form>
+            </section>
+            <section id="task-list">
+                <h2>Task List</h2>
+                <div id="filter">
+                    <label id="filter-status">Filter by Status:</label>
+                    <select id="status-select">
+                        <option value="all">All</option>
+                        <option value="complete">Complete</option>
+                        <option value="incomplete">Incomplete</option>
+                    </select>
+                    <label id="filter-priority">Sort By Due-Date:</label>
+                    <select id="sort-by-date">
+                        <option>Default</option>
+                        <option id="ascdate" value="asc">Oldest First</option>
+                        <option id="desdate"value="desc">Latest First</option>
+                    </select>
+                </div>
+                <ul id="task-list-ul">
+                    <li data-id="task-id">
+                        <span class="task-name">Task Name</span>
+                        <span class="task-description">Task Desc</span>
+                        <span class="task-date">datedue</span>
+                        <span class="task-priority">urgency</span>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

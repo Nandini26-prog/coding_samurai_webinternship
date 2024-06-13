@@ -5,7 +5,7 @@ function solve(value) {
     if (value === 'sin' || value === 'cos' || value === 'log' || value === 'ln') {
         currentInput += value + '(';
     } else if (value === '^') {
-        currentInput += '**'; // In JavaScript, exponentiation is done using **
+        currentInput += '**'; // In JS exponentiation is **
     } else {
         currentInput += value;
     }
@@ -14,7 +14,7 @@ function solve(value) {
 
 function result() {
     try {
-        // Add closing parenthesis for each function if needed
+        // Add closing parenthesis  if needed
         let openParens = (currentInput.match(/\(/g) || []).length;
         let closeParens = (currentInput.match(/\)/g) || []).length;
         while (closeParens < openParens) {
@@ -26,8 +26,8 @@ function result() {
         let result = currentInput
             .replace(/sin\(/g, 'Math.sin(')
             .replace(/cos\(/g, 'Math.cos(')
-            .replace(/log\(/g, 'Math.log10(') // log base 10
-            .replace(/ln\(/g, 'Math.log('); // natural log
+            .replace(/log\(/g, 'Math.log10(') 
+            .replace(/ln\(/g, 'Math.log('); 
 
         // Evaluate the expression
         display.value = eval(result);
