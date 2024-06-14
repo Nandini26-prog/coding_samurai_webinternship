@@ -64,6 +64,12 @@ function filterAndSort() {
   }
 
   renderFilteredTasks(filteredTasks);
+  
+  const completeTasks = document.querySelectorAll('.complete');
+  completeTasks.forEach(task => {
+    task.style.textDecoration = 'line-through';
+    // Add any other styles as needed
+  });
 }
 
 
@@ -100,18 +106,32 @@ function createTaskElement(task) {
   taskActions.classList.add('task-actions');
 
   const completeBtn = document.createElement('button');
-  completeBtn.textContent = 'Mark as Complete';
+  const completeImg = document.createElement('img');
+  completeImg.src = 'check_box.png'; // Specify the path to your image
+  completeImg.alt = 'done'; // Provide an alt attribute for accessibility
+  
+  // Append the image to the button
+  completeBtn.appendChild(completeImg);
   completeBtn.addEventListener('click', () => {
     const updatedTask = { ...task, status: task.status === 'complete' ? 'incomplete' : 'complete' };
     updateTask(task.id, updatedTask);
     li.classList.toggle('complete');
-    taskName.classList.add('complete');
+    // taskName.classList.add('complete');
+
+    taskName.classList.toggle('complete');
 
   });
   taskActions.appendChild(completeBtn);
 
   const editBtn = document.createElement('button');
-  editBtn.textContent = 'Edit';
+  // editBtn.textContent = 'Edit';
+  const editImg = document.createElement('img');
+editImg.src = 'edit.png'; // Specify the path to your image
+editImg.alt = 'Edit'; // Provide an alt attribute for accessibility
+
+// Append the image to the button
+editBtn.appendChild(editImg);
+
   taskActions.appendChild(editBtn);
     // Edit task logic
 
@@ -134,6 +154,7 @@ function createTaskElement(task) {
 
     const submiteditbtn=document.createElement('button');
     submiteditbtn.textContent='Save';
+    submiteditbtn.style.color ='#17A2B8';
     submiteditbtn.type='submit';
 
     editform.appendChild(nameEdit);
@@ -162,7 +183,12 @@ function createTaskElement(task) {
   
 
   const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = 'Delete';
+  const deletetImg = document.createElement('img');
+  deletetImg.src = 'delete.png'; // Specify the path to your image
+  deletetImg.alt = 'Delete'; // Provide an alt attribute for accessibility
+
+// Append the image to the button
+deleteBtn.appendChild(deletetImg);
   deleteBtn.addEventListener('click', () => {
     deleteTask(task.id);
     li.remove();

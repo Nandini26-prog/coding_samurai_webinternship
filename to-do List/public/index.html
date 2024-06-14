@@ -7,27 +7,11 @@
     </head>
     <body>
         <header>
-            <h1> Your Virtual Notepad</h1>
-            <h3> Todo List App</h3>
+            <h1> VIRTUAL NOTEPAD</h1>  <span id="todo_head">Todo List App</span>
         </header>
         <main>
-            <section id="Add task">
-                <h2> Add Task</h2>
-                <form>
-                    <input type="text" id="task-name" placeholder="Enter the Task Name">
-                    <input type="text" id="task-description" placeholder="Enter the task description">
-                    <input type="date" id="task-date" placeholder="enter the due date">
-                    <select id="task-priority">
-                        <option value="low">Low</option>
-                        <option value="med">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                    <button id="add-TaskBtn">Add Task</button>
-                </form>
-            </section>
             <section id="task-list">
-                <h2>Task List</h2>
-                <div id="filter">
+                <div class="filter">
                     <label id="filter-status">Filter by Status:</label>
                     <select id="status-select">
                         <option value="all">All</option>
@@ -41,16 +25,38 @@
                         <option id="desdate"value="desc">Latest First</option>
                     </select>
                 </div>
+                <div class="headings" data-text="textfromsource">
+                    <span id="task_heading">TASKS</span>
+                    <span id="details_heading">DETAILS</span>
+                    <span >DUE DATE</span>
+                    <span  id="pri_heading">PRIORITY</span>
+                    <span id="blank"></span>
+                </div>
                 <ul id="task-list-ul">
-                    <li data-id="task-id">
+                    <li class=content data-id="task-id">
+                        
                         <span class="task-name">Task Name</span>
                         <span class="task-description">Task Desc</span>
                         <span class="task-date">datedue</span>
                         <span class="task-priority">urgency</span>
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
+                        <!-- <button class="edit"><img src="edit.png" alt="Checkmark Icon"></button>
+                        <button class="delete">Delete</button> -->
                     </li>
                 </ul>
+            </section>
+            <section id="Add_task">
+                <h2> Add Task</h2>
+                <form id="addform">
+                    <input type="text" id="task-name" placeholder="Enter the Task Name">
+                    <input type="text" id="task-description" placeholder="Enter the task description">
+                    <input type="date" id="task-date" placeholder="enter the due date">
+                    <select id="task-priority">
+                        <option value="Low">Low</option>
+                        <option value="Med">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <button id="add-TaskBtn">+</button>
+                </form>
             </section>
         </main>
         <script src="script.js"></script>

@@ -1,80 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFFFF; /* Very Light Gray */
+  color: #343A40;
+  /* quicksand ,Montserrat also good */
+}
+
   
   header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+    background-color: #F8F9FA;
+    color:   #007BFF;
+    padding: 10px;
+    /* text-align: center; */
+    max-height:30%
+
   }
   
-  main {
+  /* main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+  } */
+
+main{
+  margin:0%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+  h1{
+    margin-top: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400px;
+    max-width: fit-content;
   }
-  
-  section {
-    background-color: #f7f7f7;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    margin-top: 0;
-  }
-  
-  form {
+  h2{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500px;
+    color:#007BFF;
+    /* color:#17A2B8; */
   }
-  
-  input, select {
-    margin-bottom: 10px;
+  #todo_head{
+    text-align:right;
   }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    display: flex;
+  .filter{
+   margin-left: 60%;
+    /* background-color: #0056b3; */
+}
+
+/* button{
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  /* background-color: greenyellow; */
+  /* padding: 0%;
+  margin: 0%;
+  background-color: red;
+} */ 
+.headings{
+  color: gray;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin:3%;
+}
+#task_heading{
+  width:10%;
+}
+#details_heading{
+  width: 25%;
+}
+#pri_heading{
+  width:10%;
+}
+     
+li {
+    display:flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #CCE5FF;
   }
-  
+ 
   li:last-child {
     border-bottom: none;
   }
-  
-  .complete {
-    text-decoration: line-through;
-    background-color: greenyellow;
+  .task-description{
+    width: 25%;
+    /* white-space: nowrap; Prevent the text from wrapping */
+            overflow: hidden; 
+           
   }
+  .task-name{
+    width: 10%;
+  }
+  img{
+    width:20px;
+    height: 20px;
+    border-radius: 3px;
+    padding: 0%;
+    margin: 0%;
+  }
+  img:hover{
+    background-color: #CCE5FF;
+  }
+  button{
+    border: 0px;
+    margin: 2px;
+    background-color: white;
+  }
+
+  #task-priority{
+    background-color: #FFFFFF;
+  }
+  select{
+    border: 50px;
+    padding: 10px;
+    border: 1px solid #6C757D; /* Gray */
+    border-radius: 3px;
+    background-color: #CCE5FF;
+    color: #343A40;
+    /* width:60%; */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  option{
+    background-color: #6C757D; /* Blue */
+    color: white;
+  }
+
+ input{
+  border: 50px;
+  padding: 10px;
+  border: 1px solid #6C757D; /* Gray */
+  border-radius: 3px;
+  width:60%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+    
+ form{
+  margin-left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:50%
+  }
+
+  #add-TaskBtn{
+    margin-top: 15px;
+    background-color:#6C757D; /* Background color */
+    color: white; /* Text color */
+    font-size: 25px; /* Font size */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 50%; /* Rounded corners */
+    cursor: pointer; 
+  }
+
+  .complete {
+    text-decoration: line-through   !important;
+   
+    /* background-color: greenyellow; */
+  }
+  
   .hidden {
     display: none;
   }
-  
+   
