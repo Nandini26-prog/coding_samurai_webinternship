@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #FFFFFF; /* Very Light Gray */
+  background-color: #FFFFFF; 
   color: #343A40;
-  /* quicksand ,Montserrat also good */
+  /* quicksand ,Montserrat */
 }
 
   
@@ -12,18 +12,10 @@ body {
     background-color: #F8F9FA;
     color:   #007BFF;
     padding: 10px;
-    /* text-align: center; */
     max-height:30%
 
   }
   
-  /* main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  } */
-
 main{
   margin:0%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -41,14 +33,12 @@ main{
     font-family: 'Montserrat', sans-serif;
     font-weight:500px;
     color:#007BFF;
-    /* color:#17A2B8; */
   }
   #todo_head{
     text-align:right;
   }
   .filter{
    margin-left: 60%;
-    /* background-color: #0056b3; */
 }
 
 /* button{
@@ -92,7 +82,7 @@ li {
   .task-description{
     width: 25%;
     /* white-space: nowrap; Prevent the text from wrapping */
-            overflow: hidden; 
+    overflow: hidden; 
            
   }
   .task-name{
@@ -130,14 +120,14 @@ li {
   }
 
   option{
-    background-color: #6C757D; /* Blue */
+    background-color: #6C757D; 
     color: white;
   }
 
  input{
   border: 50px;
   padding: 10px;
-  border: 1px solid #6C757D; /* Gray */
+  border: 1px solid #6C757D; 
   border-radius: 3px;
   width:60%;
   box-sizing: border-box;
@@ -155,12 +145,12 @@ li {
 
   #add-TaskBtn{
     margin-top: 15px;
-    background-color:#6C757D; /* Background color */
-    color: white; /* Text color */
-    font-size: 25px; /* Font size */
-    padding: 10px 20px; /* Padding */
-    border: none; /* No border */
-    border-radius: 50%; /* Rounded corners */
+    background-color:#6C757D; 
+    color: white; 
+    font-size: 25px;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 50%; 
     cursor: pointer; 
   }
 
