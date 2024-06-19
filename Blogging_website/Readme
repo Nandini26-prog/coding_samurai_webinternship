@@ -1,8 +1,0 @@
-A Full Stack Personal Blog Application, where you can read ,comment and add your own blog.
-TechStack used:
-  -HTML,CSS,Javascript,MongoDB, ejs, JWT(for authorization).
-Features include:
-1)connection to a databse
-2)CRUD features for Blogs
-3)separate Sign In, Sign Up buttons
-4)Blog display on screen as a card
