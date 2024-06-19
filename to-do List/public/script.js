@@ -244,30 +244,33 @@ fetch('/api/todos', {
   method: 'GET',
   headers: { 'Content-Type': 'application/json' },
 })
- // body: JSON.stringify({ name: 'New Task', description: 'New Task Description', priority: 'medium' }),
- .then(response => {
+.then(response => {
   if (!response.ok) {
     throw new Error('Network response was not ok ' + response.statusText);
   }
   return response.json();
 })
- .then((data) => {
-    todoList = data;
-    updateLocalStorage();
-    renderTaskList();
-  });
+.then(data => {
+  todoList = data;
+  updateLocalStorage();
+  renderTaskList();
+})
+.catch(error => {
+  console.error('There has been a problem with your fetch operation:', error);
+});
 
 
   
-  const updatedTodo={
-      id: "ID_of_todo_item_to_update",
-      name: "updated-name",
-      description: "updated-description"
-  };
 
-fetch('/api/todos',{
-    method:'PUT',
-    headers:{ 'Content-Type': 'application/json'},
+  const updatedTodo = {
+    id: "ID_of_todo_item_to_update",
+    name: "updated-name",
+    description: "updated-description"
+  };
+  
+  fetch('/api/todos', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(updatedTodo),
   })
   .then(response => {
@@ -276,11 +279,14 @@ fetch('/api/todos',{
     }
     return response.json();
   })
-   .then((data) => {
-      todoList = data;
-      updateTask(task.id,updatedTodo);
-      renderTaskList();
-    });
+  .then(data => {
+    updateTask(updatedTodo.id, updatedTodo);
+    renderTaskList();
+  })
+  .catch(error => {
+    console.error('There has been a problem with your fetch operation:', error);
+  });
+  
 
 
 fetch('/api/todos', {
@@ -304,18 +310,18 @@ fetch('/api/todos', {
 
   
   const todoIdToDelete = 'ID_of_todo_item_to_delete';
-  fetch(`/api/todos/${todoIdToDelete}`, {
-    method: 'DELETE',
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok ' + response.statusText);
-    }
-    return response.json();
-  })
-  .then((data) => {
-    deleteTask(task.id);
-  })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
+fetch(`/api/todos/${todoIdToDelete}`, {
+  method: 'DELETE',
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok ' + response.statusText);
+  }
+  return response.json();
+})
+.then(data => {
+  deleteTask(todoIdToDelete);
+})
+.catch(error => {
+  console.error('There has been a problem with your fetch operation:', error);
+});

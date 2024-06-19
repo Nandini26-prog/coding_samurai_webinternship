@@ -1,8 +1,8 @@
-const express=require('express');
+const { Router }=require('express');
 
 const User=require('../models/user');
 
-const router=express.Router();
+const router=Router();
 
 
 router.get('/signin',(req,res)=>{
@@ -15,16 +15,14 @@ router.get("/signup",(req,res)=>{
 
 
 
-
-
-router.post('/signup',async(req,res)=>{
-    const {fullName,email,password}=req.body;
+router.post("/signup", async (req, res) => {
+    const { fullName, email, password } = req.body;
     await User.create({
-        fullName,
-        email,
-        password,
+      fullName,
+      email,
+      password,
     });
-    return res.redirect("/signup");
-});
+    return res.redirect("/");
+  });
 
 module.exports=router;

@@ -2,7 +2,7 @@ const path=require("path");
 const express = require('express');
 const mongoose=require('mongoose');
 
-const userRoute=require('./routes/user');
+const userRoute=require("./routes/user");
 
 const app=express();
 const PORT = 8000; //to not fix a port we will use env
@@ -19,4 +19,4 @@ app.get('/',(req,res)=>{
 });
 
 app.use("/user",userRoute);
-app.listen(PORT,()=> console.log("server started at port: ${PORT}"));
+app.listen(PORT,()=> console.log(`Server Started at PORT:${PORT}`));

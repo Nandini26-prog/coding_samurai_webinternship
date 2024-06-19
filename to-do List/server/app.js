@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+ 
+const cors =require("cors");
 
+app.use(cors());
 const todoList = [];
 
 app.get('/api/todos', (req, res) => {
@@ -13,13 +16,13 @@ app.get('/api/todos', (req, res) => {
 app.post('/api/todos', (req, res) => {
   const newTodo = req.body;
   todoList.push(newTodo);
-  res.json(newTodo);
+  res.json(todoList);
 });
 
 app.put('/api/todos/:id', (req, res) => {
-  const id = req.params.id;
+  const id = req.params;
   const updatedTodo = req.body;
-  const index = todoList.findIndex((todo) => todo.id === id);
+  const index = todoList.findIndex((todo) => todo.id === parseInt(id));
   if (index !== -1) {
     // Merge updated task information with the existing task object
     todoList[index] = { ...todoList[index], ...updatedTodo };
