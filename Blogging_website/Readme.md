@@ -9,8 +9,8 @@ Features include:
 
 below are the snippets from the work
 
-![Screenshot (90)](https://github.com/Nandini26-prog/coding_samurai_webinternship/assets/113116163/aea8872b-c4c1-4c3f-b84d-b40af64e557c)
+![Screenshot (90)](https://github.com/Nandini26-prog/coding_samurai_webinternship/assets/113116163/62524d8c-881d-41f9-9b1a-fe263ebacce7)
+
 ![Screenshot (89)](https://github.com/Nandini26-prog/coding_samurai_webinternship/assets/113116163/86011d6c-9cce-43b2-b4af-60d4974225ee)
 ![Screenshot (88)](https://github.com/Nandini26-prog/coding_samurai_webinternship/assets/113116163/750d5c55-8cfc-4fd5-914c-8f34fbf36920)
-![Screenshot (87)](https://github.com/Nandini26-prog/coding_samurai_webinternship/assets/113116163/8dc830a9-4009-48cb-9cba-c1da16e80937)
 
